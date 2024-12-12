@@ -1,0 +1,144 @@
+/* Toàn bộ trang */
+.order__info {
+    background-color: #f9f9f9; /* Màu nền nhạt cho thông tin */
+    padding: 20px;
+    border-radius: 8px; /* Góc bo tròn */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
+  }
+  
+  .section__title {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .order__price {
+    color: #0006db; /* Màu cam nổi bật */
+  }
+  
+  .section__description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  /* Khoảng cách giữa các nhóm thông tin */
+  .order__info p {
+    margin-bottom: 10px;
+  }
+  
+  /* Payment Information */
+  .payment__info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .payment__info h5 {
+    color: #444;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Trạng thái (Status) */
+  .section__description span {
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  
+  /* Màu sắc trạng thái */
+  .section__description span[style*="color: rgb(76, 175, 80)"] {
+    background-color: rgba(76, 175, 80, 0.1);
+  }
+  
+  .section__description span[style*="color: rgb(255, 193, 7)"] {
+    background-color: rgba(255, 193, 7, 0.1);
+  }
+  
+  .section__description span[style*="color: rgb(33, 150, 243)"] {
+    background-color: rgba(33, 150, 243, 0.1);
+  }
+  
+  .section__description span[style*="color: rgb(244, 67, 54)"] {
+    background-color: rgba(244, 67, 54, 0.1);
+  }
+  
+  /* Hình ảnh */
+  img.w-100 {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Container khoảng cách */
+  .container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+/* Đảm bảo modal content được căn giữa */
+  /* Form chỉnh sửa */
+  .modal-body {
+    padding: 20px 15px;
+  }
+
+  /* Đảm bảo modal được căn giữa cả chiều ngang và dọc */
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh; /* Đặt modal luôn nằm ở giữa màn hình */
+    margin: 0; /* Loại bỏ margin mặc định */
+  }
+  
+  .modal-content {
+    margin: auto;
+    max-width: 500px; /* Giới hạn chiều rộng */
+    border-radius: 8px; /* Bo góc */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm bóng */
+  }
+  
+  
+  .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+  
+  .modal-header {
+    text-align: center;
+    padding: 15px 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  button {
+    border-radius: 5px; /* Bo góc nút */
+  }
+  
+  button:focus {
+    outline: none; /* Loại bỏ viền outline khi focus */
+  }
+  
+
+/* Nút hành động */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  button.me-2 {
+    margin-right: 10px;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+  } 

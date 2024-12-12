@@ -1,0 +1,108 @@
+/* purchase.css */
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Căn giữa các item */
+    gap: 20px; /* Khoảng cách giữa các đơn thuê */
+    margin-top: 30px; /* Khoảng cách từ trên xuống */
+    padding: 0 20px; /* Khoảng cách lề trái và phải */
+  }
+  
+  .status-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .status-nav a {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .status-nav a:hover {
+    color: white;
+    background-color: #0056b3;
+  }
+  
+  .status-nav .active-link {
+    color: white;
+    background-color: #0056b3;
+    font-weight: bold;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin: 20px 0;
+  }
+  
+  footer {
+    background-color: #002080;
+    color: white;
+    padding: 40px 20px;
+  }
+  
+  footer .footer-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  footer .footer-section div {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  footer .footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  footer .footer-section p,
+  footer .footer-section a {
+    font-size: 14px;
+    color: #ddd;
+    text-decoration: none;
+  }
+  
+  footer .footer-section a:hover {
+    color: #fff;
+  }
+  
+  footer .newsletter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  footer .newsletter input[type="email"] {
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    flex: 1;
+  }
+  
+  footer .newsletter button {
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  footer .newsletter button:hover {
+    background-color: #003580;
+  }
+  
