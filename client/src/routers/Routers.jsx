@@ -9,6 +9,7 @@ import Purchase from "../pages/Purchase";
 import PurchaseDetails from "../pages/PurchaseDetails";
 import NotFound from "../pages/NotFound";
 import Contact from "../pages/Contact";
+import Profile from "../pages/Profile";
 
 const Routers = () => {
   return (
@@ -21,6 +22,7 @@ const Routers = () => {
       <Route path="/purchases" element={<Purchase/>} />
       <Route path="/purchases/:slug" element={<PurchaseDetails/>} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/profile" element={<Profile />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef,useState} from 'react';
 
 import {Container, Row, Col} from 'reactstrap';
 import {Link, NavLink} from 'react-router-dom';
@@ -28,37 +28,65 @@ const navLinks = [
 ];
 const Header = () => {
 
+    
     const menuRef = useRef(null);
+    const [showMenu, setShowMenu] = useState(false);
+
+    // Toggle Main Menu
     const toggleMenu = () => menuRef.current.classList.toggle('menu__active');
+
+    // Toggle User Dropdown Menu
+    const toggleUserMenu = () => {
+        console.log("Toggle Menu Clicked!");
+        setShowMenu(!showMenu);
+        console.log("showMenu State:", !showMenu);
+    };
+
+    const closeUserMenu = () => {
+        setShowMenu(false);
+    };
   return ( <header className='header'>
 
     {/* header top */}
     <div className="header__top">
-        <Container>
-            <Row>
-                <Col lg='6' md='6' sm='6'>
-                    <div className="header__top__left">
-                        <span>Need Help?</span>
-                        <span className="header__top__help">
-                        <i class="ri-phone-fill"></i> +84 123 456 789
-                        </span>
-                    </div>
-                </Col>
+            <Container>
+                <Row>
+                    <Col lg="6" md="6" sm="6">
+                        <div className="header__top__left">
+                            <span>Need Help?</span>
+                            <span className="header__top__help">
+                                <i className="ri-phone-fill"></i> +84 123 456 789
+                            </span>
+                        </div>
+                    </Col>
 
-                <Col lg='6' md='6' sm='6'>
-                    <div className="header__top__right d-flex align-itmes-center justify-content-end gap-3">
-                        <Link to ='#' className="d-flex align-items-center gap-1"> 
-                            <i class="ri-login-circle-line"></i> Login 
-                        </Link>
+                    <Col lg="6" md="6" sm="6">
+                        <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
+                            {/* User Icon */}
+                            <div className="user-menu">
+                                <div
+                                    onClick={toggleUserMenu}
+                                    className="d-flex align-items-center gap-1 user-icon"
+                                >
+                                    <i className="ri-user-line"></i> User
+                                </div>
 
-                        <Link to ='#' className="d-flex align-items-center gap-1"> 
-                            <i class="ri-user-line"></i> Register
-                        </Link>
-                    </div>
-                </Col>
-            </Row>
-        </Container>
-    </div>
+                                {/* Dropdown Menu */}
+                                <div className={`dropdown-menu ${showMenu ? "show" : ""}`}>
+                                    <Link to="/profile" className="dropdown-item" onClick={closeUserMenu}>
+                                        <i className="ri-user-fill"></i> Profile
+                                    </Link>
+                                    <hr style={{ margin: '0' }} />
+                                    <Link to="/logout" className="dropdown-item" onClick={closeUserMenu}>
+                                        <i className="ri-logout-box-r-line"></i> Logout
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
 
     {/* header middle */}
     <div className="header__middle">
